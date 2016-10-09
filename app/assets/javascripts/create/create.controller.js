@@ -1,12 +1,11 @@
 var CreateController = function(CreateService){
   var vm = this;
 
-  vm.genre = "story";
+  var genres = ["story", "poem", "dialogue"];
 
-  // vm.word = {
-  //   actual: "cat",
-  //   type: "noun"
-  // };
+  vm.quantity = Math.floor(Math.random() * genres.length) + 1
+
+  vm.genre = genres[vm.quantity];
 
   vm.creation = "";
   vm.word = '';
