@@ -183,6 +183,9 @@ h6,
   font-size: 5em;
   padding: .3em;
 }
+.no-hover:hover {
+  text-decoration: none;
+}
 ul,
 ol {
   padding-left: 30px;
