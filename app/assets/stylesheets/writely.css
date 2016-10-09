@@ -179,6 +179,10 @@ h6,
   font-size: 12px;
   line-height: 18px;
 }
+.title {
+  font-size: 5em;
+  padding: .3em;
+}
 ul,
 ol {
   padding-left: 30px;
@@ -206,11 +210,15 @@ address {
   font-style: normal;
 }
 blockquote {
-  padding-left: 15px;
-  border-left: 5px solid #a99ca6;
+  /*padding-left: 15px;*/
+  /*border-left: 5px solid #a99ca6;*/
+  text-align: center;
   font-size: 16px;
   line-height: 22px;
   font-style: italic;
+}
+.quote {
+  margin-top: 4em;
 }
 pre {
   padding: 10px;

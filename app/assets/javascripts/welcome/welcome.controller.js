@@ -1,7 +1,10 @@
 var WelcomeController = function(){
   var vm = this;
 
-  vm.greet = "hello";
+  vm.quote = {
+    text: '“If you want to be a writer, you must do two things above all others: read a lot and write a lot.”',
+    author: 'Stephen King'
+  };
 
 }
 
