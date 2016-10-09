@@ -6,7 +6,9 @@ var CreateController = function(){
   vm.word = {
     actual: "cat",
     type: "noun"
-  }
+  };
+
+  vm.creation = "";
 
 }
 
