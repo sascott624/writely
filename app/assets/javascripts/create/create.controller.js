@@ -1,7 +1,12 @@
 var CreateController = function(){
   var vm = this;
 
-  vm.test = "testing";
+  vm.genre = "story";
+
+  vm.word = {
+    actual: "cat",
+    type: "noun"
+  }
 
 }
 
