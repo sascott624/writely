@@ -2090,7 +2090,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form select,
 .uk-form textarea {
   box-sizing: border-box;
-  margin: 0;
+  margin: 3em;
   border-radius: 0;
   font: inherit;
   color: inherit;
