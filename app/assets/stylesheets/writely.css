@@ -5718,6 +5718,9 @@ a.uk-thumbnail:focus {
   margin-top: 0;
   background: #f5f5f5;
   color: #58799c;
+  border: 1px solid #a99ca6;  
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+  padding: 0 20px 3px;
 }
 .uk-open > .uk-dropdown-navbar {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
