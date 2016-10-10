@@ -4,8 +4,13 @@
 
 
 <div style="margin-left: 3em">
-  <p class="uk-text-large">Write a <button class="uk-button" ng-click="vm.newGenre()">{{vm.genre}}</button> using the word or phrase <button class="uk-button" ng-click="vm.newWord()" ng-model="vm.word">{{vm.word}}</button></p>
+  <p class="uk-text-large">Write a
+    <button class="uk-button" data-uk-tooltip title="click to shuffle" ng-click="vm.newGenre()">{{vm.genre}}</button> using the word or phrase
+    <button class="uk-button" data-uk-tooltip title="click to shuffle" ng-click="vm.newWord()" ng-model="vm.word">{{vm.word}}</button>
+  </p>
 </div>
+
+
 
 
 <div class="uk-form">
