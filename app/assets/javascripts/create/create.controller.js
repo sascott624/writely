@@ -29,11 +29,13 @@ var CreateController = function(CreateService, $state, $timeout){
     })
 
   vm.refresh = function(){
+    vm.newWord();
+    vm.newGenre();
     vm.content = "";
     vm.author = "";
   }
 
-  vm.publish = function(){
+  vm.submit = function(){
     CreateService.publish(vm.content, vm.author, vm.genre);
     $timeout(function(){modal.hide(), vm.refresh()}, 500);
     $timeout(function(){UIkit.modal.alert("Thank you for your submission!")}, 1000);
