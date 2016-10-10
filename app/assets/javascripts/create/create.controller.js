@@ -1,11 +1,11 @@
 var CreateController = function(CreateService){
   var vm = this;
 
-  var genres = ["story", "poem", "dialogue", "joke", "summary", "introduction", "scene", "song", "tribute", "law", "high school rule", "tardy excuse", "doctor's note", "confession"];
+  var genres = ["story", "poem", "dialogue", "joke", "summary", "introduction", "scene", "song", "tribute", "law", "high school rule", "tardy excuse", "doctor's note", "confession", "speech", "memoir", "lie", "greeting card", "movie trailer voiceover"];
   vm.quantity = Math.floor(Math.random() * genres.length)
   vm.genre = genres[vm.quantity];
 
-  vm.creation = "";
+  vm.content = "";
   vm.word = '';
 
   vm.newGenre = function(){
@@ -26,7 +26,7 @@ var CreateController = function(CreateService){
     })
 
   vm.refresh = function(){
-    vm.creation = "";
+    vm.content = "";
   }
 
 }
