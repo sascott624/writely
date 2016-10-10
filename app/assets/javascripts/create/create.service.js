@@ -9,6 +9,10 @@ var CreateService = function($http){
       'X-Mashape-Key': 'Fgn0xNn8bvmshqXyUdWyiu74UAgKp1soem0jsnqnohDclD8vWz'}
     });
   }
+
+  vm.publish = function(content, author, genre){
+    return $http.post('/writing_samples', {content: content, author: author, genre: genre});
+  }
 }
 
 angular
