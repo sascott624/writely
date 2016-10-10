@@ -12,17 +12,18 @@
 
 
 <div class="uk-form">
-      <textarea  name="" id="" class="uk-scrollable-text uk-width-9-10" style="display: block; margin-left: auto; margin-right: auto; height: 280px; border-radius: 1em" ng-model="vm.creation"></textarea>
+      <textarea  name="" id="" class="uk-scrollable-text uk-width-9-10" style="display: block; margin-left: auto; margin-right: auto; height: 280px; border-radius: 1em" ng-model="vm.content"></textarea>
 
+      <!-- modal ---------------------------------------------------------->
       <div id="author-name" class="uk-modal">
         <div class="uk-modal-dialog">
-          <input class="uk-form-width-large uk-align-center" type="text" placeholder="please enter your (user)name" ng-bind="vm.author"/>
+          <input class="uk-form-width-large uk-align-center" type="text" placeholder="please enter your (user)name" ng-model="vm.author"/>
           <div class="uk-modal-footer">
-            <button class="uk-button-large uk-align-center">Publish</button>
+            <button class="uk-button-large uk-align-center" ng-click="vm.publish()">Submit to Archive</button>
           </div>
         </div>
-
       </div>
+      <!-- end modal ------------------------------------------------------->
 
 </div>
 
