@@ -2093,7 +2093,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form select,
 .uk-form textarea {
   box-sizing: border-box;
-  margin: 3em;
+  margin: 3em 2em 3em;
   border-radius: 0;
   font: inherit;
   color: inherit;
@@ -2178,7 +2178,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="color"] {
   height: 30px;
   max-width: 100%;
-  padding: 4px 6px;
+  padding: 2em 3em 2em;
   border: 1px solid #a99ca6;
   background: rgba(214, 214, 214, 0.75);
   color: #58799c;
@@ -7050,7 +7050,8 @@ a.uk-thumbnail:focus {
   line-height: 13px;
   color: #33445d;
 }
-.uk-form-password-toggle:hover {
+.
+-password-toggle:hover {
   color: #33445d;
   text-decoration: none;
 }

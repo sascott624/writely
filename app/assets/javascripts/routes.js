@@ -12,6 +12,16 @@ angular
           templateUrl: 'create/create.html',
           controller: 'CreateController as vm'
         })
+        .state('archive', {
+          url: '/archive',
+          templateUrl: 'archive/archive.html',
+          controller: 'ArchiveController as vm'
+        })
+        .state('random', {
+          url: '/random',
+          templateUrl: 'archive/random.html',
+          controller: 'ArchiveController as vm'
+        })
         .state('about', {
           url: '/about',
           templateUrl: 'static/about.html',
