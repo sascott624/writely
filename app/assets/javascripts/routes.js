@@ -27,5 +27,10 @@ angular
           templateUrl: 'static/about.html',
           controller: 'WelcomeController as vm'
         })
+        .state('contact', {
+          url: '/contact',
+          templateUrl: 'static/contact.html',
+          controller: 'WelcomeController as vm'
+        })
         $urlRouterProvider.otherwise('welcome');
     });
