@@ -25,6 +25,10 @@ var CreateController = function(CreateService){
       vm.word = response.data.word;
     })
 
+  vm.refresh = function(){
+    vm.creation = "";
+  }
+
 }
 
 angular
