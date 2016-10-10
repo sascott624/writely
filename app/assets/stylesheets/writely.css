@@ -8,6 +8,22 @@ html {
 body {
   margin: 0;
 }
+.typewriter{
+  position: relative;
+  margin-top: 65px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typewriter:before {
+  margin-top: 80px;
+  z-index: -1;
+  position: absolute;
+  /*margin: 0 auto;*/
+  content: url('typewriter-small.png');
+  opacity: 0.125;
+}
 a {
   background: transparent;
 }
@@ -222,6 +238,14 @@ blockquote {
 }
 .quote {
   margin-top: 4em;
+}
+.quote-text {
+  color: rgb(67, 90, 119);
+  font-size: 2em;
+}
+.author {
+  color: rgb(67, 90, 119);
+  font-size: 2em;
 }
 pre {
   padding: 10px;
