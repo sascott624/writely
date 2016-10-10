@@ -12,5 +12,10 @@ angular
           templateUrl: 'create/create.html',
           controller: 'CreateController as vm'
         })
+        .state('about', {
+          url: '/about',
+          templateUrl: 'static/about.html',
+          controller: 'WelcomeController as vm'
+        })
         $urlRouterProvider.otherwise('welcome');
     });
