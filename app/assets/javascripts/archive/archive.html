@@ -4,14 +4,23 @@
   <div class="uk-grid"><!--  grid ------------------------------------>
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
       <ul ng-repeat="s in vm.writingSamples">
-        <li><span class="uk-text-bold uk-text-large">{{s.genre}} </span>using the word or phrase <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span> by <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
+        <li>
+          <span class="uk-text-bold uk-text-large">{{s.genre}} </span>
+          using the word or phrase
+          <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span>
+          by
+          <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
+
           <a href="/#/archive/{{s.id}}">see more</a>
         </li>
       </ul>
     </div><!--  info about writing sample ------------------------------------>
 
-    <div class="uk-width-1-2">
-      <ui-view></ui-view> <!--  content of sample ---------------------------->
+    <div class="uk-width-1-2" style="background-color: #D8D8D8; border-radius: 1em; padding: 0.25em;">
+      <ui-view>
+        <br>
+        <p style="text-align: center;">Please click the "see more" link of your selected writing sample to view its content</p>
+      </ui-view> <!--  content of sample ---------------------------->
     </div>
 
   </div><!--  grid ------------------------------------>
