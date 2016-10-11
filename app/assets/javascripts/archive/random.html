@@ -1,5 +1,16 @@
-<div style="margin-top: 1em; margin-left: 3em">
+<div style="margin: 1em 3em 1em 3em">
   <h1>random</h1>
-  <p><em>Please enjoy this selection from our archive:</em></p>
-  <ui-view></ui-view>
+  <p>Please enjoy this
+    <span class="uk-text-bold uk-text-large">{{vm.writingSample.genre}} </span>
+    written by user
+    <span class="uk-text-bold uk-text-large">{{vm.writingSample.author}}</span>,
+    using the word or phrase
+    <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{vm.writingSample.random}}"</span>:</p>
+
+  <div
+    class="uk-height-1-1"
+    style="margin: 1em; background-color: #F5F5F5; border-radius: 1em; padding: 1em;">
+      <p>{{vm.writingSample.content}}</p>
+  </div>
+
 </div>
