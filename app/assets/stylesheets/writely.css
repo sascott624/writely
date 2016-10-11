@@ -215,6 +215,9 @@ ol > li > ol,
 ol > li > ul {
   margin: 0;
 }
+ul {
+  list-style: circle;
+}
 dt {
   font-weight: bold;
 }

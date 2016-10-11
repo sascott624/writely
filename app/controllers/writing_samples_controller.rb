@@ -26,7 +26,7 @@ class WritingSamplesController < ApplicationController
   private
 
   def writing_sample_params
-    params.require(:writing_sample).permit(:content, :author, :genre)
+    params.require(:writing_sample).permit(:content, :author, :genre, :random)
   end
 
 end

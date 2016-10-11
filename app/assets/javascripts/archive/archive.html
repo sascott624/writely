@@ -1,9 +1,9 @@
-<div class="uk-height-1-1" style="margin: 1em 3em 1em 3em">
+<div style="margin: 1em 3em 1em 3em; height: 70%;">
   <h1>archive</h1>
 
   <div class="uk-grid"><!--  grid ------------------------------------>
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
-      <ul ng-repeat="s in vm.writingSamples">
+      <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
         <li>
           <span class="uk-text-bold uk-text-large">{{s.genre}} </span>
           using the word or phrase
@@ -23,6 +23,14 @@
       </ui-view> <!--  content of sample ---------------------------->
     </div>
 
-  </div><!--  grid ------------------------------------>
 
+  </div><!--  grid ------------------------------------>
 </div><!--  margin ------------------------------------>
+
+
+<div>
+  <ul class="uk-pagination">
+      <li><button ng-disabled="vm.currentPage == 0" ng-click="vm.prevPage()">previous</button></li>
+      <li class="uk-active"><button ng-click="vm.nextPage()" ng-disabled="vm.currentPage == vm.pageCount() - 1">next</button></li>
+  </ul>
+</div>
