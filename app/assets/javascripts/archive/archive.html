@@ -3,7 +3,7 @@
 
   <div>
     <ul ng-repeat="s in vm.writingSamples">
-      <li><span class="uk-text-bold">{{s.genre}} </span>by <span style="color: #6C5968; font-weight: 900; letter-spacing: 1.5px">{{s.author}}</span>:
+      <li><span class="uk-text-bold uk-text-large">{{s.genre}} </span>using the word or phrase <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span> by <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
         <button ng-click="showDetails = ! showDetails">see more</button>
         <p ng-show="showDetails">{{s.content}}</p>
       </li>

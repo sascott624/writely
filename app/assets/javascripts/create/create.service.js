@@ -10,8 +10,8 @@ var CreateService = function($http){
     });
   }
 
-  vm.publish = function(content, author, genre){
-    return $http.post('/writing_samples', {content: content, author: author, genre: genre});
+  vm.publish = function(content, author, genre, word){
+    return $http.post('/writing_samples', {content: content, author: author, genre: genre, random: word});
   }
 }
 

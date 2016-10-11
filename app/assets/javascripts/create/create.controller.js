@@ -36,7 +36,7 @@ var CreateController = function(CreateService, $state, $timeout){
   }
 
   vm.submit = function(){
-    CreateService.publish(vm.content, vm.author, vm.genre);
+    CreateService.publish(vm.content, vm.author, vm.genre, vm.word);
     $timeout(function(){modal.hide(), vm.refresh()}, 500);
     $timeout(function(){UIkit.modal.alert("Thank you for your submission!")}, 1000);
   }

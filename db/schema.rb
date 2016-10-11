@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010201016) do
+ActiveRecord::Schema.define(version: 20161011141728) do
 
   create_table "writing_samples", force: :cascade do |t|
     t.text   "content"
     t.string "author"
     t.string "genre"
+    t.string "random"
   end
 
 end
