@@ -1,12 +1,19 @@
-<div style="margin-top: 1em; margin-left: 3em">
+<div class="uk-height-1-1" style="margin: 1em 3em 1em 3em">
   <h1>archive</h1>
 
-  <div>
-    <ul ng-repeat="s in vm.writingSamples">
-      <li><span class="uk-text-bold uk-text-large">{{s.genre}} </span>using the word or phrase <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span> by <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
-        <button ng-click="showDetails = ! showDetails">see more</button>
-        <p ng-show="showDetails">{{s.content}}</p>
-      </li>
-    </ul>
-  </div>
-</div>
+  <div class="uk-grid"><!--  grid ------------------------------------>
+    <div class="uk-width-1-2"><!--  info about writing sample --------------->
+      <ul ng-repeat="s in vm.writingSamples">
+        <li><span class="uk-text-bold uk-text-large">{{s.genre}} </span>using the word or phrase <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span> by <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
+          <a href="/#/archive/{{s.id}}">see more</a>
+        </li>
+      </ul>
+    </div><!--  info about writing sample ------------------------------------>
+
+    <div class="uk-width-1-2">
+      <ui-view></ui-view> <!--  content of sample ---------------------------->
+    </div>
+
+  </div><!--  grid ------------------------------------>
+
+</div><!--  margin ------------------------------------>

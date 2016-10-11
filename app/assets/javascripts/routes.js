@@ -22,6 +22,16 @@ angular
             }
           }
         })
+        .state('archive.id', {
+          url: '/:id',
+          templateUrl: 'archive/archive.show.html',
+          controller: 'ArchiveShowController as vm',
+          resolve: {
+            writingSample: function($stateParams, ArchiveService){
+              return ArchiveService.getSampleById($stateParams.id);
+            }
+          }
+        })
         .state('random', {
           url: '/random',
           templateUrl: 'archive/random.html',
