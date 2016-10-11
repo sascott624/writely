@@ -15,7 +15,12 @@ angular
         .state('archive', {
           url: '/archive',
           templateUrl: 'archive/archive.html',
-          controller: 'ArchiveController as vm'
+          controller: 'ArchiveController as vm',
+          resolve: {
+            writingSamples: function(ArchiveService){
+              return ArchiveService.getWritingSamples();
+            }
+          }
         })
         .state('random', {
           url: '/random',

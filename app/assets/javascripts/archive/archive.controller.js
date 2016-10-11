@@ -1,5 +1,7 @@
-var ArchiveController = function(){
+var ArchiveController = function(writingSamples){
   var vm = this;
+
+  vm.writingSamples = writingSamples.data;
 }
 
 angular
