@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.0'
 gem 'angular-rails-templates'
 gem 'active_model_serializers'
 
@@ -24,6 +24,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem "foreman"
