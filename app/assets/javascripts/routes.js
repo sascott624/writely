@@ -27,7 +27,7 @@ angular
           templateUrl: 'archive/archive.show.html',
           controller: 'ArchiveShowController as vm',
           resolve: {
-            writingSample: ['$stateParams', 'ArchiveService', function($stateParams, ArchiveService){
+            'writingSample': ['$stateParams', 'ArchiveService', function($stateParams, ArchiveService){
               return ArchiveService.getSampleById($stateParams.id);
             }]
           }
@@ -37,7 +37,7 @@ angular
           templateUrl: 'archive/random.html',
           controller: 'ArchiveController as vm',
           resolve: {
-            writingSamples: ['ArchiveService', function(ArchiveService){
+            'writingSamples': ['ArchiveService', function(ArchiveService){
               return ArchiveService.getWritingSamples();
             }]
           }

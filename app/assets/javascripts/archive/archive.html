@@ -1,6 +1,10 @@
 <div style="margin: 1em 3em 1em 3em; height: 70%;">
   <h1>archive</h1>
 
+  <div ng-show="vm.writingSamples.length == 0">
+    <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
+  </div>
+
   <div class="uk-grid"><!--  grid ------------------------------------>
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
       <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
