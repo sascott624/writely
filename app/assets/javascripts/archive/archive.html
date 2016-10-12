@@ -20,14 +20,15 @@
       </ul>
     </div><!--  end info about writing sample --------------------------------->
 
-    <div ng-show="vm.writingSamples.length > 0" class="uk-width-1-2" style="height: 100%; background-color: #D8D8D8; border-radius: 1em; padding: 0.25em;">
+<div ng-show="vm.writingSamples.length > 0">
+    <div class="uk-width-1-2" style="height: 100%; background-color: #D8D8D8; border-radius: 1em; padding: 0.25em;">
       <ui-view class="uk-height-1-1">
 
         <p style="padding-top: 1em; text-align: center; height: 100%">Please click the "see more" link of your selected writing sample to view its content</p>
-        
+
       </ui-view> <!--  content of sample ---------------------------->
     </div>
-
+</div>
 
   </div><!--  grid ------------------------------------>
 </div><!--  margin ------------------------------------>
