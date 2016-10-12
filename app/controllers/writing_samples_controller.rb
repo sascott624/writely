@@ -10,7 +10,7 @@ class WritingSamplesController < ApplicationController
     if @writing_sample.save
       render json: @writing_sample
     else
-      @writing_sample.errors.add("Error")
+      render :new
     end
   end
 
