@@ -2573,8 +2573,11 @@ select.uk-form-width-mini {
   position: relative;
 }
 @font-face {
-  font-family: 'FontAwesome';
-  src: url("./fonts/fontawesome-webfont.woff2") format('woff2'), url("./fonts/fontawesome-webfont.woff") format("woff"), url("./fonts/fontawesome-webfont.ttf") format("truetype");
+  font-family: 'Font-Awesome';
+  src: asset-url('font-awesome.eot');
+  src: asset-url('font-awesome.eot?#iefix') format('embedded-opentype'),
+  asset-url('font-awesome.svg') format('svg'),
+  asset-url('font-awesome.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
