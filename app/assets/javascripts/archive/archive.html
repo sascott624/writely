@@ -5,7 +5,9 @@
     <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
   </div>
 
-  <div class="uk-grid"><!--  grid ------------------------------------>
+  
+                              <!--  grid ------------------------------------>
+  <div class="uk-grid" ng-show="vm.writingSamples.length > 0">
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
       <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
         <li>
@@ -20,7 +22,6 @@
       </ul>
     </div><!--  end info about writing sample --------------------------------->
 
-<div ng-show="vm.writingSamples.length > 0">
     <div class="uk-width-1-2" style="height: 100%; background-color: #D8D8D8; border-radius: 1em; padding: 0.25em;">
       <ui-view class="uk-height-1-1">
 
@@ -28,7 +29,7 @@
 
       </ui-view> <!--  content of sample ---------------------------->
     </div>
-</div>
+
 
   </div><!--  grid ------------------------------------>
 </div><!--  margin ------------------------------------>
