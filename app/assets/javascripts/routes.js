@@ -1,6 +1,9 @@
+
+
+
 angular
     .module('app')
-    .config(function($urlRouterProvider, $stateProvider) {
+    .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
       $stateProvider
         .state('welcome', {
           url: '/welcome',
@@ -17,9 +20,9 @@ angular
           templateUrl: 'archive/archive.html',
           controller: 'ArchiveController as vm',
           resolve: {
-            writingSamples: function(ArchiveService){
+            'writingSamples': ['ArchiveService', function(ArchiveService){
               return ArchiveService.getWritingSamples();
-            }
+            }]
           }
         })
         .state('archive.id', {
@@ -27,9 +30,9 @@ angular
           templateUrl: 'archive/archive.show.html',
           controller: 'ArchiveShowController as vm',
           resolve: {
-            writingSample: function($stateParams, ArchiveService){
+            writingSample: ['$stateParams', 'ArchiveService', function($stateParams, ArchiveService){
               return ArchiveService.getSampleById($stateParams.id);
-            }
+            }]
           }
         })
         .state('random', {
@@ -37,9 +40,9 @@ angular
           templateUrl: 'archive/random.html',
           controller: 'ArchiveController as vm',
           resolve: {
-            writingSamples: function(ArchiveService){
+            writingSamples: ['ArchiveService', function(ArchiveService){
               return ArchiveService.getWritingSamples();
-            }
+            }]
           }
         })
         .state('about', {
@@ -53,4 +56,4 @@ angular
           controller: 'WelcomeController as vm'
         })
         $urlRouterProvider.otherwise('welcome');
-    });
+    }]);
