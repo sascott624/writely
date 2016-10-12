@@ -15,6 +15,9 @@ var CreateService = function($http){
   }
 }
 
+CreateService.$inject = ['$http'];
+
+
 angular
   .module('app')
   .service('CreateService', CreateService)
