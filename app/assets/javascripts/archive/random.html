@@ -1,6 +1,11 @@
 <div style="margin: 1em 3em 1em 3em">
   <h1>random</h1>
-  <p>Please enjoy this
+  
+  <div ng-show="vm.writingSamples.length == 0">
+    <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
+  </div>
+
+  <p ng-show="vm.writingSamples.length > 0">Please enjoy this
     <span class="uk-text-bold uk-text-large">{{vm.writingSample.genre}} </span>
     written by user
     <span class="uk-text-bold uk-text-large">{{vm.writingSample.author}}</span>,
