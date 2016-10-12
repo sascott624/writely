@@ -5,9 +5,9 @@
     <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
   </div>
 
-  
+
                               <!--  grid ------------------------------------>
-  <div class="uk-grid" ng-show="vm.writingSamples.length > 0">
+  <div class="uk-grid" ng-hide="vm.writingSamples.length == 0">
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
       <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
         <li>
