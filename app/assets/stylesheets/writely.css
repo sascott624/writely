@@ -2572,15 +2572,11 @@ select.uk-form-width-mini {
   vertical-align: middle;
   position: relative;
 }
-/*@font-face {
+@font-face {
   font-family: 'FontAwesome';
-      src: font-url('stylesheets/fonts/fontawesome-webfont.eot?v=4.0.3');
-      src: font-url('stylesheets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
-      font-url('stylesheets/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),
-      font-url('stylesheets/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
-      font-url('stylesheets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
-      font-weight: normal;
-      font-style: normal;*/
+  src: url("./fonts/fontawesome-webfont.woff2") format('woff2'), url("./fonts/fontawesome-webfont.woff") format("woff"), url("./fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 [class*='uk-icon-'] {
   font-family: FontAwesome;

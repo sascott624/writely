@@ -14,5 +14,4 @@
 //= require angular
 //= require angular-ui-router
 //= require angular-rails-templates
-//= require stylesheets/writely
 //= require_tree .
