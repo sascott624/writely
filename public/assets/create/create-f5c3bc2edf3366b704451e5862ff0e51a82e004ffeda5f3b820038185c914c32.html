@@ -1,0 +1,38 @@
+<div style="margin-top: 1em; margin-left: 3em">
+  <h1>directive:</h1>
+</div>
+
+
+<div style="margin-left: 3em">
+  <p class="uk-text-large">Write a
+    <button class="uk-button" data-uk-tooltip title="click to shuffle" ng-click="vm.newGenre()">{{vm.genre}}</button> using the word or phrase
+    <button class="uk-button" data-uk-tooltip title="click to shuffle" ng-click="vm.newWord()" ng-model="vm.word">{{vm.word}}</button>
+  </p>
+</div>
+
+
+<div class="uk-form">
+      <textarea  name="" id="" class="uk-scrollable-text uk-width-9-10" style="display: block; margin-left: auto; margin-right: auto; height: 280px; border-radius: 1em" ng-model="vm.content"></textarea>
+
+      <!-- modal ---------------------------------------------------------->
+      <div id="author-name" class="uk-modal">
+        <div class="uk-modal-dialog">
+          <a href="" class="uk-modal-close uk-close"></a>
+          <input class="uk-form-width-large uk-align-center" type="text" placeholder="please enter your (user)name" ng-model="vm.author"/>
+          <div class="uk-modal-footer">
+            <button class="uk-button-large uk-align-center" ng-click="vm.submit()">Submit to Archive</button>
+          </div>
+        </div>
+      </div>
+      <!-- end modal ------------------------------------------------------->
+
+</div>
+
+
+<div class="uk-grid" style="margin-top: 2.5em;">
+  <div class="uk-width-2-10"></div>
+  <button class="uk-button uk-width-2-10" ng-click="vm.refresh()">Refresh</button>
+  <div class="uk-width-2-10"></div>
+  <button class="uk-button uk-width-2-10" data-uk-modal="{target:'#author-name'}">Publish</button>
+  <div class="uk-width-2-10"></div>
+</div>

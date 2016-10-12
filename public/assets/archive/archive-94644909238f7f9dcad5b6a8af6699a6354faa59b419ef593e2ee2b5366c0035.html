@@ -1,0 +1,40 @@
+<div style="margin: 1em 3em 1em 3em; height: 70%;">
+  <h1>archive</h1>
+
+  <div ng-show="vm.writingSamples.length == 0">
+    <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
+  </div>
+
+  <div class="uk-grid"><!--  grid ------------------------------------>
+    <div class="uk-width-1-2"><!--  info about writing sample --------------->
+      <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
+        <li>
+          <span class="uk-text-bold uk-text-large">{{s.genre}} </span>
+          using the word or phrase
+          <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{s.random}}"</span>
+          by
+          <span class="uk-text-bold uk-text-large">{{s.author}}</span>:
+
+          <a href="/#/archive/{{s.id}}">see more</a>
+        </li>
+      </ul>
+    </div><!--  end info about writing sample --------------------------------->
+
+    <div class="uk-width-1-2" style="height: 100%; background-color: #D8D8D8; border-radius: 1em; padding: 0.25em;">
+      <ui-view class="uk-height-1-1">
+        <br>
+        <p style="text-align: center;">Please click the "see more" link of your selected writing sample to view its content</p>
+      </ui-view> <!--  content of sample ---------------------------->
+    </div>
+
+
+  </div><!--  grid ------------------------------------>
+</div><!--  margin ------------------------------------>
+
+
+<div>
+  <ul class="uk-pagination">
+      <li><button ng-disabled="vm.currentPage == 0" ng-click="vm.prevPage()">previous</button></li>
+      <li class="uk-active"><button ng-click="vm.nextPage()" ng-disabled="vm.currentPage == vm.pageCount() - 1">next</button></li>
+  </ul>
+</div>
