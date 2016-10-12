@@ -1,4 +1,11 @@
-var CreateController = function(CreateService, $state, $timeout){
+angular
+  .module('app')
+  .controller('CreateController', ['CreateService', '$state', '$timeout', function(CreateService, $state, $timeout){
+
+
+
+
+// var CreateController = function(CreateService, $state, $timeout){
   var vm = this;
 
   var genres = ["story", "poem", "dialogue", "joke", "summary", "introduction", "scene", "song", "tribute", "law", "high school rule", "tardy excuse", "doctor's note", "confession", "speech", "memoir", "lie", "greeting card", "movie trailer voiceover"];
@@ -42,7 +49,3 @@ var CreateController = function(CreateService, $state, $timeout){
   }
 
 }
-
-angular
-  .module('app')
-  .controller('CreateController', CreateController)
