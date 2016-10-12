@@ -1,4 +1,4 @@
-var ArchiveController = function(writingSamples){
+var ArchiveController = function(writingSamples, $state){
   var vm = this;
 
   vm.writingSamples = writingSamples.data;
@@ -22,6 +22,10 @@ var ArchiveController = function(writingSamples){
   vm.prevPage = function(){
     vm.currentPage -= 1;
     vm.begin -= 6;
+  }
+
+  vm.shuffle = function(){
+    $state.reload();
   }
 
 }
