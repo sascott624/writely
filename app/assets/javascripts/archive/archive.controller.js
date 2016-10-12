@@ -27,8 +27,10 @@ var ArchiveController = function(writingSamples, $state){
   vm.shuffle = function(){
     $state.reload();
   }
-
 }
+
+ArchiveController.$inject = ['writingSamples', '$state'];
+
 
 angular
   .module('app')
