@@ -10,6 +10,8 @@ var ArchiveService = function($http){
   }
 }
 
+ArchiveService.$inject = ['$http'];
+
 angular
   .module('app')
   .service('ArchiveService', ArchiveService)
