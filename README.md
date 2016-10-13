@@ -1,7 +1,5 @@
 # Writely
 
-<a href="create-writely.herokuapp.com">deployed to heroku here</a>
-
 ###About
 
 Welcome to Writely! A single page application built with Angular and a Rails API. Writely provides a simple creative writing exercise to encourage users to practice writing and find inspiration.
