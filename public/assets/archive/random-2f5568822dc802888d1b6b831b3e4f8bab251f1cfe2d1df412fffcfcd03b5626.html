@@ -1,0 +1,29 @@
+<div style="margin: 1em 3em 1em 3em">
+  <h1>random</h1>
+
+  <div ng-show="vm.writingSamples.length == 0">
+    <h3>There are no samples to show yet! Please <a href="" ui-sref="create">create</a> one to share.</h3>
+  </div>
+
+  <p ng-hide="vm.writingSamples.length == 0">Please enjoy this
+    <span class="uk-text-bold uk-text-large">{{vm.writingSample.genre}} </span>
+    written by user
+    <span class="uk-text-bold uk-text-large">{{vm.writingSample.author}}</span>,
+    using the word or phrase
+    <span style="font: 14px Georgia; color: #6C5968; font-weight: 900; letter-spacing: 1.5px;">"{{vm.writingSample.random}}"</span>:</p>
+
+  <div
+    class="uk-height-1-1 uk-scrollable-text"
+    style="margin: 1em; background-color: #F5F5F5; border-radius: 1em; padding: 1em;">
+      <pre>{{vm.writingSample.content}}</pre>
+  </div>
+
+</div>
+
+
+
+<div class="uk-grid" style="margin-top: 2.5em;">
+  <div class="uk-width-2-5"></div>
+  <button class="uk-button uk-width-1-5" ng-click="vm.shuffle()">Shuffle</button>
+  <div class="uk-width-2-5"></div>
+</div>
