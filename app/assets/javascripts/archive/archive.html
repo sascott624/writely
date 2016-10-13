@@ -6,7 +6,8 @@
   </div>
 
 
-                              <!--  grid ------------------------------------>
+<!--  grid ------------------------------------------------------------------>
+
   <div class="uk-grid" ng-hide="vm.writingSamples.length == 0">
     <div class="uk-width-1-2"><!--  info about writing sample --------------->
       <ul ng-repeat="s in vm.writingSamples | limitTo: 6: vm.begin">
@@ -38,6 +39,6 @@
 <div>
   <ul class="uk-pagination">
       <li><button ng-disabled="vm.currentPage == 0" ng-click="vm.prevPage()">previous</button></li>
-      <li class="uk-active"><button ng-click="vm.nextPage()" ng-disabled="vm.currentPage == vm.pageCount() - 1">next</button></li>
+      <li class="uk-active"><button ng-click="vm.nextPage()" ng-disabled="vm.currentPage == vm.pageCount() - 1 || vm.writingSamples.length == 0">next</button></li>
   </ul>
 </div>

@@ -17,6 +17,7 @@ var ArchiveController = function(writingSamples, $state){
   vm.nextPage = function(){
     vm.currentPage += 1;
     vm.begin += 6;
+    console.log(vm.writingSamples.length);
   }
 
   vm.prevPage = function(){
