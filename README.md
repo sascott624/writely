@@ -1,5 +1,6 @@
-# <a href="create-writely.herokuapp.com">Writely</a>
+# Writely
 
+<a href="create-writely.herokuapp.com">deployed to heroku here</a>
 
 ###About
 
