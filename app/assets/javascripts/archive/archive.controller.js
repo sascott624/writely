@@ -1,7 +1,9 @@
-var ArchiveController = function(writingSamples, $state){
+var ArchiveController = function(ArchiveService, $state){
   var vm = this;
 
-  vm.writingSamples = writingSamples.data;
+  ArchiveService.getWritingSamples().then(function(response){
+    vm.writingSamples = response.data;
+  });
 
   vm.id = Math.floor(Math.random() * vm.writingSamples.length);
 
@@ -29,7 +31,7 @@ var ArchiveController = function(writingSamples, $state){
   }
 }
 
-ArchiveController.$inject = ['writingSamples', '$state'];
+ArchiveController.$inject = ['ArchiveService', '$state'];
 
 
 angular

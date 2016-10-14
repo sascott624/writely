@@ -16,11 +16,11 @@ angular
           url: '/archive',
           templateUrl: 'archive/archive.html',
           controller: 'ArchiveController as vm',
-          resolve: {
-            'writingSamples': ['ArchiveService', function(ArchiveService){
-              return ArchiveService.getWritingSamples();
-            }]
-          }
+          // resolve: {
+          //   'writingSamples': ['ArchiveService', function(ArchiveService){
+          //     return ArchiveService.getWritingSamples();
+          //   }]
+          // }
         })
         .state('archive.id', {
           url: '/:id',
