@@ -1,9 +1,17 @@
 var ArchiveController = function(ArchiveService, $state){
   var vm = this;
+  var writingSamples = [];
 
-  ArchiveService.getWritingSamples().then(function(response){
-    vm.writingSamples = response.data;
-  });
+  activate();
+
+  function activate(){
+    return ArchiveService.getWritingSamples().then(function(response){
+      vm.writingSamples = response.data;
+      return vm.writingSamples;
+    });
+  }
+
+
 
   vm.id = Math.floor(Math.random() * vm.writingSamples.length);
 
